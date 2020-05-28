@@ -33,14 +33,10 @@
 
 
 <% @cocktails.each do |cocktail| %>
-    <div class= "card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-primary" %>
-</h2>
-        <p><%= cocktail.address%> <strong><%= cocktail.description%></strong> <%= cocktail.price_per_night %> <%= cocktail.number_of_guests %></p>
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('martini.png') %>)">
+        <p><%= cocktail.name %><p>
       </div>
-    </div>
 <% end %>
 
 
