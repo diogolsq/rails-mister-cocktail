@@ -1,7 +1,8 @@
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-
+  <div class="input-color">
+    <%= f.input :description %>
+    <%= f.input :name %>
+  </div>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
 

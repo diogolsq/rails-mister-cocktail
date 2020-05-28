@@ -13,6 +13,10 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @doses = Dose.where(cocktail_id: @cocktail)
+    @doses.each do |dose|
+      @ingredient = Ingredient.find(params[:ingredient_id])
+    end
   end
 
   def new
