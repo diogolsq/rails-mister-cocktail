@@ -8,7 +8,7 @@
   <div class="cards">
     <% @doses.each do |dose| %>
 
-        <p><%= dose.ingredient_id %> <%= dose.description %> <p>
+        <p><%= @ingredient.name %> <%= dose.description %> <p>
       </div>
     <% end %>
 

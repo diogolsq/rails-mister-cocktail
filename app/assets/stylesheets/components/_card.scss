@@ -21,7 +21,7 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-family: $cards-font;
@@ -67,7 +67,7 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
