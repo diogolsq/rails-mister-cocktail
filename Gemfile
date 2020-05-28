@@ -46,3 +46,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', '4.0.0.beta3', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+
+# make runnable in different web browsers
+gem 'autoprefixer-rails'
+# new font to get icons
+gem 'font-awesome-sass', '~> 5.12.0'
+
+# better forms
+gem 'simple_form'
