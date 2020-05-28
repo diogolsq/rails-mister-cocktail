@@ -4,6 +4,12 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    if params[:search]
+      if params[:search][:query]
+        @cocktailresult = Cocktail.find_by(name: params[:search][:query])
+        redirect_to cocktail_path(@cocktailresult)
+      end
+    end
   end
 
   def show
