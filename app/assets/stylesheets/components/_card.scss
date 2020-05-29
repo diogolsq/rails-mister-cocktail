@@ -7,10 +7,15 @@
 }
 
 .card-ingredient h3 {
-  padding:8px;
+  padding:0;
   color:white;
 }
 
+.card-ingredient-header{
+  display:flex;
+  // justify-content: start;
+  flex-direction: column;
+}
 
 
 .card-category {

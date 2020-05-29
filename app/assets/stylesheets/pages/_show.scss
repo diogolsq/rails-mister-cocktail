@@ -1,3 +1,50 @@
 .img-show img{
   height:150px;
 }
+
+
+
+.show-remove-link {
+  font-size: 16px;
+  color: white;
+  border-radius: 50%;
+  // border: 1px solid white;s
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.8;
+  // transform: rotatse(45deg);
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+
+show-description-card{
+  margin:0;
+}
+
+.fa-plus{
+  color:gray;
+  margin-top:0;
+}
+
+.fa-edit{
+  color:gray;
+  margin-top:0;
+}
+
+.fa-trash{
+
+  color:rgba(242, 9, 9, 1);
+}
+
+.fa-trash:hover{
+
+  color:rgba(242, 9, 9, 0.5);
+}
