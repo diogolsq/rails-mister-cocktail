@@ -4,7 +4,7 @@
     <div class="input-color">
       <%= f.input :name %>
       <%= f.input :description, hint: 'How to make the cocktail' %>
-      <%= f.input :image_url, hint: 'We Recomend PNG vector images' %>
+      <%= f.input :photo, as: :file, hint: 'We Recomend PNG vector images' %>
       <%= f.submit class: 'btn btn-primary' %>
     </div>
   <% end %>

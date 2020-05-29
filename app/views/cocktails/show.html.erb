@@ -3,8 +3,8 @@
 <div class="getting-margin">
       <h1><%= @cocktail.name %></h1>
       <div class="img-show">
-        <% if @cocktail.image_url %>
-          <%= image_tag(@cocktail.image_url) %>
+        <% if @cocktail.photo %>
+          <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
         <% end %>
       </div>
     <hr>

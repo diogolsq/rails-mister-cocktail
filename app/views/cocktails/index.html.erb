@@ -11,7 +11,7 @@
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)), url(<%= asset_path(cocktail.image_url) %>)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
           <p><%= cocktail.name %><p>
         </div>
       <% end %>
