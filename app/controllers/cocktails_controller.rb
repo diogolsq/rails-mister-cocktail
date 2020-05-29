@@ -17,10 +17,12 @@ class CocktailsController < ApplicationController
 
   def show
     @doses = Dose.where(cocktail_id: @cocktail)
+    @ingredients = []
     @doses.each do |dose|
       @cocktail = Cocktail.find(dose.cocktail_id)
-      @ingredients = Ingredient.where(id: dose.ingredient_id)
+      @ingredients << Ingredient.find(dose.ingredient_id)
     end
+    @ing_dose_pair = @ingredients.zip(@doses)
   end
 
   def new
@@ -41,7 +43,6 @@ class CocktailsController < ApplicationController
   end
 
   def update
-
     @cocktail.update(cocktails_params)
 
     redirect_to cocktail_path

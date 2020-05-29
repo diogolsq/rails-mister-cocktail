@@ -26,14 +26,12 @@
        <% end %>
     </div>
 
-    <% @doses.each do |dose| %>
-      <% @ingredients.each do |ingredient| %>
-        <p><%= ingredient.name %> <%= dose.description %>
+    <% @ing_dose_pair.each do |ingredient, dose| %>
+        <p><%= ingredient.name %> - <%= dose.description %>
           <%= link_to cocktail_dose_path(@cocktail, dose), method:'DELETE', data: { confirm: "Are you sure?" } do %>
             <i class="fas fa-trash"></i>
           <% end %>
         </p>
-      <% end %>
     <% end %>
   </div>
 
