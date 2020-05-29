@@ -11,12 +11,15 @@
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(cocktail.image_url) %>)">
-      <p><%= cocktail.name %><p>
-
-      </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)), url(<%= asset_path(cocktail.image_url) %>)">
+          <p><%= cocktail.name %><p>
+        </div>
       <% end %>
     <% end %>
+      <%= link_to new_cocktail_path, class: "my-2 my-sm-0 ml-2" do%>
+        <div class="card-category add" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)), url(<%= asset_path("plus.png") %>)">
+        </div>
+      <% end %>
   </div>
 
 
