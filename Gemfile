@@ -57,3 +57,6 @@ gem 'simple_form'
 
 # hide credentials from github
 gem 'dotenv-rails', groups: [:development, :test]
+
+# setting online repo for the image files
+gem 'cloudinary', '~> 1.12.0'
