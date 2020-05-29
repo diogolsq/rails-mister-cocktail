@@ -1,13 +1,16 @@
 class CocktailsController < ApplicationController
-
-  before_action :find_cocktail, only: [:show, :edit, :destroy]
+  before_action :find_cocktail, only: [:show, :edit, :destroy, :update]
 
   def index
     @cocktails = Cocktail.all
     if params[:search]
       if params[:search][:query]
         @cocktailresult = Cocktail.find_by(name: params[:search][:query])
-        redirect_to cocktail_path(@cocktailresult)
+        if @cocktailresult
+          redirect_to cocktail_path(@cocktailresult)
+        else
+          render :index
+        end
       end
     end
   end
@@ -16,7 +19,7 @@ class CocktailsController < ApplicationController
     @doses = Dose.where(cocktail_id: @cocktail)
     @doses.each do |dose|
       @cocktail = Cocktail.find(dose.cocktail_id)
-      @ingredient = Ingredient.find(dose.ingredient_id)
+      @ingredients = Ingredient.where(id: dose.ingredient_id)
     end
   end
 
@@ -34,6 +37,16 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+
+    @cocktail.update(cocktails_params)
+
+    redirect_to cocktail_path
+  end
+
   private
 
   def find_cocktail
@@ -41,6 +54,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktails_params
-    params.require(:cocktail).permit(:name, :description)
+    params.require(:cocktail).permit(:name, :description, :image_url)
   end
 end

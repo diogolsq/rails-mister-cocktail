@@ -1,9 +1,7 @@
 
-
-
 <div class="getting-margin">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description, label_html: { class: 'input-color' } %>
+      <%= f.input :description, label_html: { class: 'input-color' }, hint: 'size/ volume of each ingredient' %>
       <%= f.association :ingredient, label_html: { class: 'input-color' }  %>
     <%= f.submit class: 'btn btn-primary' %>
   <% end %>

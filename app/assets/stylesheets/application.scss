@@ -17,11 +17,17 @@ body {
   background: #1A1A1A;
 }
 
-h1, p {
-  color: #94E8B4;
+h1, h2, h3, p {
+  color: white;
 }
 
 
 .getting-margin {
   margin-top:64px;
+  padding:8px;
+}
+
+
+.getting-margin p {
+  margin:24px;
 }

@@ -6,11 +6,18 @@
   grid-gap: 16px;
 }
 
+.card-ingredient h3 {
+  padding:8px;
+  color:white;
+}
+
 
 
 .card-category {
   position: relative;
-  background-size: cover;
+  background-size: 3em;
+  background-color: black;
+  background-repeat: no-repeat;
   /*filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(4deg) brightness(104%) contrast(103%);*/
   background-position: center;
   height: 200px;

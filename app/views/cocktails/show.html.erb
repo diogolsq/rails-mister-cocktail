@@ -2,19 +2,27 @@
 
 <div class="getting-margin">
   <h1><%= @cocktail.name %></h1>
-
+  <div class="img-show">
+    <% if @cocktail.image_url %>
+      <%= image_tag(@cocktail.image_url) %>
+    <% end %>
+  </div>
+  <hr>
+  <h2> How to do it</h2>
   <p><%= @cocktail.description %></p>
 
-  <div class="cards">
+  <div class="card-ingredient">
+    <h3>Ingredients</h3>
     <% @doses.each do |dose| %>
-
-        <p><%= @ingredient.name %> <%= dose.description %> <p>
-      </div>
+      <% @ingredients.each do |ingredient| %>
+        <p><%= ingredient.name %> <%= dose.description %> <p>
+      <% end %>
     <% end %>
+  </div>
 
-
-
-  <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
+  <%= link_to 'Edit', edit_cocktail_path(@cocktail) %>
+  <br>
+  <%= link_to 'Add Ingredients', new_cocktail_dose_path(@cocktail) %>
   <br>
   <%= link_to 'Back to HomePage', cocktails_path %>
 

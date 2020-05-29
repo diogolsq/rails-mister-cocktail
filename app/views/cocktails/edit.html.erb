@@ -3,7 +3,7 @@
   <%= simple_form_for @cocktail do |f| %>
     <div class="input-color">
       <%= f.input :name %>
-      <%= f.input :description, hint: 'How to make the cocktail' %>
+      <%= f.input :description %>
       <%= f.input :image_url, hint: 'We Recomend PNG vector images' %>
       <%= f.submit class: 'btn btn-primary' %>
     </div>
