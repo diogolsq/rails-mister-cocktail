@@ -1,39 +1,48 @@
+
+
 <div class="getting-margin">
-  <h1><%= @cocktail.name %></h1>
-  <div class="img-show">
-    <% if @cocktail.image_url %>
-      <%= image_tag(@cocktail.image_url) %>
-    <% end %>
-  </div>
-  <hr>
+  <section id="about">
+    <div class="container">
+      <h1><%= @cocktail.name %></h1>
+      <div class="img-show">
+        <% if @cocktail.image_url %>
+          <%= image_tag(@cocktail.image_url) %>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+  </section>
 
 
+  <section id="about">
 
-  <div class="show-description-card">
-    <h2> How to do it</h2>
-    <%= link_to edit_cocktail_path(@cocktail) do %>
-      <i class="far fa-edit"></i>
-    <% end %>
-    <p><%= @cocktail.description %></p>
-  </div>
-
-
-  <div class="card-ingredient">
-    <div class="card-ingredient-header">
-      <h3>Ingredients</h3>
-       <%= link_to new_cocktail_dose_path(@cocktail) do %>
-        <i class="fas fa-plus"></i>
-       <% end %>
+    <div class="show-description-card">
+      <h2> How to do it</h2>
+      <%= link_to edit_cocktail_path(@cocktail) do %>
+        <i class="far fa-edit"></i>
+      <% end %>
+      <p><%= @cocktail.description %></p>
     </div>
 
-    <% @ing_dose_pair.each do |ingredient, dose| %>
-        <p><%= ingredient.name %> - <%= dose.description %>
-          <%= link_to cocktail_dose_path(@cocktail, dose), method:'DELETE', data: { confirm: "Are you sure?" } do %>
-            <i class="fas fa-trash"></i>
-          <% end %>
-        </p>
-    <% end %>
-  </div>
+
+    <div class="card-ingredient" >
+      <div class="card-ingredient-header">
+        <h3 data-aos="fade-right">Ingredients</h3>
+         <%= link_to new_cocktail_dose_path(@cocktail) do %>
+          <i class="fas fa-plus"></i>
+         <% end %>
+      </div>
+
+      <% @ing_dose_pair.each do |ingredient, dose| %>
+          <p><%= ingredient.name %> - <%= dose.description %>
+            <%= link_to cocktail_dose_path(@cocktail, dose), method:'DELETE', data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+      <% end %>
+    </div>
+
+  </section>
 
 
 
@@ -41,3 +50,9 @@
   <%= link_to 'Back to HomePage', cocktails_path , class:'btn btn-secondary' %>
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="script.js"></script>
