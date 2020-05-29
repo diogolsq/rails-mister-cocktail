@@ -21,8 +21,8 @@ listingredient['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
 
-# Ingredient.create(name: 'Lemon')
-# Ingredient.create(name: 'Ice')
+Ingredient.create(name: 'Tonic')
+Ingredient.create(name: 'Other')
 # Ingredient.create(name: 'Mint Leaves')
 # Ingredient.create(name: 'Gin')
 # Ingredient.create(name: 'Vodka')
