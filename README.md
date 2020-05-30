@@ -1,24 +1,11 @@
-# README
+# Mr Cocktail #
+fun project that was done in span less than 30 hours to create a website, mobile responsible, that works with n:n relation db, postgree sql, ruby on rails framework with MVC arquitecture, cloudinary and hosted in Heroku.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Visuals ##
 
-Things you may want to cover:
 
-* Ruby version
+![mobile display](http://g.recordit.co/OBvWRmzfv5.gif)
 
-* System dependencies
+ 
+you can access in: https://mrdiogococktail.herokuapp.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
