@@ -9,7 +9,10 @@ class CocktailsController < ApplicationController
         if @cocktailresult
           redirect_to cocktail_path(@cocktailresult)
         else
-          render :index
+          # redirect_to action:'index', alert: "Cocktail not found"
+          # flash.alert
+          flash[:error] = 'Cocktail not found'
+          redirect_to action:'index', danger: "Cocktail not found"
         end
       end
     end
